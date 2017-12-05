@@ -12,10 +12,9 @@
 <center><h1>The Great Race</h1>
 <center><h3>Click Green Light to Begin</h3>
 </head>
-<canvas id="myCanvas" width="1400" height="900" style="border:3px solid black;">
+<canvas id="myCanvas" width="1400" height="700" style="border:3px solid black;">
 </canvas>
 <center><body> 
-	
     <div class="red"></div> 
     <div class="blue"></div> 
     <div2 onclick="switchLight(0);" class="light stop on" id="pause"></div2> 
@@ -47,10 +46,10 @@ function switchLight(lightNumber) {
                 switchLight(2); 
                 function winTest() { 
                     if (rSpeed > bSpeed) { 
-                        alert(); 
+                        alert("Left car has won the race!"); 
                         reset(0); 
                     } else { 
-                        alert(); 
+                        alert("Right car has won the race!!"); 
                         reset(0); 
                     } 
                     switchLight(0); 
@@ -86,4 +85,3 @@ function switchLight(lightNumber) {
         }); 
     </script> 
 </body> 
-</html>

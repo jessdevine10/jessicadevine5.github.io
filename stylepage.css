@@ -7,7 +7,7 @@ div {
 }
 .blue {  
     background-image: url("car.png"); 
-    top: 350px;
+    top: 500px;
 }
 
 body {
@@ -23,7 +23,6 @@ h1 {
 h3 {
 	color: solid black;
 }
-
 
 .light { 
 
