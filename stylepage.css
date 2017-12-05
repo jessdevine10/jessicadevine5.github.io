@@ -1,7 +1,3 @@
-.stop {background-color: #ff8080;} 
-.slow {background-color: #778899;} 
-.go {background-color: #99ffcc;} 
-.on {opacity: 3;} 
 
 
 body {
@@ -25,3 +21,8 @@ div {
 	position: absolute;
 	background-image: url("car.png"):
 }
+
+.stop {background-color: #ff8080;} 
+.slow {background-color: #778899;} 
+.go {background-color: #99ffcc;} 
+.on {opacity: 3;} 
