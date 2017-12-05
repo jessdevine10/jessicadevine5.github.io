@@ -1,4 +1,14 @@
-
+div {
+	height: 300px;
+	width: 600px;
+	margin-bottom: 200px;
+	position: absolute;
+	background-image: url("car.png"):
+}
+.blue {  
+    background-image: url("car.png"); 
+    top: 350px;
+}
 
 body {
 	background-color:#778899;
@@ -14,13 +24,7 @@ h3 {
 	color: solid black;
 }
 
-div {
-	height: 280px;
-	width: 250px;
-	margin-bottom: 100px;
-	position: absolute;
-	background-image: url("car.png"):
-}
+
 .light { 
 
   height: 100px; 
