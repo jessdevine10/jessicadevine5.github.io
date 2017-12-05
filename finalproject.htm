@@ -13,8 +13,9 @@
 
 </head>
 <center><body>
-	<center><h3>Click Green Light to Begin</h3>
-	<  
+	<center><h3>Click Green Light to Begin</h3> 
+		<div="red"></div>
+		
      <div2 onclick="switchLight(0);" class="light stop on" id="pause"></div2> 
    <div2 onclick="switchLight(1);" class="light slow"></div2>
     <div2 onclick="switchLight(2);" class="light go" id="go"></div2>   
@@ -37,21 +38,21 @@ function switchLight(lightNumber) {
   var light = LIGHT[lightNumber]; 
   light.classList.add("on"); 
 }
-
+/* jquery animate */
         $(document).ready(function() { 
             $("#go").click(function() { 
                 var r = $('.red'), 
-                     = $('.blue'), 
+                    d = $('.doubleRed), 
                     wW = $(window).width(), 
                     rSpeed = Math.floor(Math.random() * wW + wW), 
-                    Speed = Math.floor(Math.random() * wW + wW); 
+                    dpeed = Math.floor(Math.random() * wW + wW); 
                 switchLight(2); 
                 function winTest() { 
-                    if (rSpeed > bSpeed) { 
-                        alert("Left car has won the race!"); 
+                    if (rSpeed > dSpeed) { 
+                        alert("Top car has won :)!"); 
                         reset(0); 
                     } else { 
-                        alert("Right car has won the race!!"); 
+                        alert("Bottom car has won :)!"); 
                         reset(0); 
                     } 
                     switchLight(0); 
@@ -62,12 +63,12 @@ function switchLight(lightNumber) {
                     }, { 
                         duration: 600, 
                         done: function() { 
-                            bAnim.stop(500); 
+                            dAnim.stop(500); 
                             winTest(); 
                         } 
                     }); 
-                    var bAnim = b.animate({ 
-                        left: bSpeed 
+                    var dAnim = d.animate({ 
+                        left: dSpeed 
                     }, { 
                         duration: 600, 
                         done: function() { 
@@ -79,9 +80,9 @@ function switchLight(lightNumber) {
                 race(); 
                 function reset() { 
                     rSpeed = 0; 
-                    bSpeed = 0; 
+                    dSpeed = 0; 
                     r.css('left', 20); 
-                    b.css('left', 20); 
+                    d.css('left', 20); 
                 } 
             }); 
         }); 
