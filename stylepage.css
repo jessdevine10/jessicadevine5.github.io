@@ -5,11 +5,10 @@ div {
 	position: absolute;
 	background-image: url("car.png"):
 }
-.blue {  
-    background-image: url("car.png"); 
-    top: 500px;
-}
 
+.blue {
+background-image: url("car.png"):
+}	
 body {
 	background-color:#778899;
 }
@@ -27,7 +26,7 @@ h3 {
 .light { 
 
   height: 100px; 
-  width : 150px; 
+  width : 100px; 
   border-radius: 60%; 
   opacity : 0.5; 
   margin: 0 auto; 
