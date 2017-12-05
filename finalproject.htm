@@ -27,5 +27,12 @@ var threelights = document.getElementByClassName("light");
 }
 </script>
 
+<script>
+function switchLight(lightNumber) { 
+  Off(); 
+  var light = threelghts[lightNumber]; 
+  light.classList.add("go"); 
+}
+
 </body>
 </html>
