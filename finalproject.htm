@@ -16,10 +16,9 @@
 	<center><h3>Click Green Light to Begin</h3> 
 		<div="red"></div>
 		<div="blue"></div>
-		
      <div2 onclick="switchLight(0);" class="light stop on" id="pause"></div2> 
    <div2 onclick="switchLight(1);" class="light slow"></div2>
-    <div2 onclick="switchLight(2);" class="light go" id="go"></div2>   
+    <div2 onclick="switchLight(2);" class="light go" id="go"></div2> 
 </body>
 
 <script type="text/javascript">
@@ -50,10 +49,10 @@ function switchLight(lightNumber) {
                 switchLight(2); 
                 function winTest() { 
                     if (rSpeed > bSpeed) { 
-                        alert("Top car has won :)!"); 
+                        alert('Top red car wins! :)'); 
                         reset(); 
                     } else { 
-                        alert("Bottom car has won :)!"); 
+                        alert('Bottom red car wins! :)'); 
                         reset(); 
                     } 
                     switchLight(0); 
@@ -64,28 +63,29 @@ function switchLight(lightNumber) {
                     }, { 
                         duration: 600, 
                         done: function() { 
-                            dAnim.stop(500); 
-                            winTest(); 
+                            bAnim.stop(300); 
+                            winTest(300); 
                         } 
                     }); 
                     var bAnim = b.animate({ 
-                        left: dSpeed 
+                        left: bSpeed 
                     }, { 
                         duration: 600, 
                         done: function() { 
-                            rAnim.stop(500); 
-                            winTest(); 
+                            rAnim.stop(300); 
+                            winTest(300); 
                         } 
                     }); 
                 } 
                 race(); 
                 function reset() { 
                     rSpeed = 0; 
-                    dSpeed = 0; 
-                    r.css('left', 20); 
-                    b.css('left', 20); 
+                    bSpeed = 0; 
+                    r.css('left', 0); 
+                    b.css('left', 0); 
                 } 
             }); 
         }); 
     </script> 
 </body> 
+</html> 
