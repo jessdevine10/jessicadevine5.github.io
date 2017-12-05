@@ -19,5 +19,13 @@
 <div2 onclick="switchLight(1);" class="light slow"></div2>
 <div2 onclick="switchLight(2);" class="light go" id="go"></div2>  
 </body>
+<script type="text/javascript">
+var LIGHTS = document.getElementsByClassName("light");
+function allOff() { 
+  for (var i=0; i<LIGHTS.length; i = i+1) { 
+    LIGHTS[i].classList.remove("on"); 
+  } 
+} 
+</script>
 
 </html>
