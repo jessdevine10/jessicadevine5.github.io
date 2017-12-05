@@ -15,6 +15,7 @@
 <center><body>
 	<center><h3>Click Green Light to Begin</h3> 
 		<div="red"></div>
+		<div="blue"></div>
 		
      <div2 onclick="switchLight(0);" class="light stop on" id="pause"></div2> 
    <div2 onclick="switchLight(1);" class="light slow"></div2>
@@ -42,13 +43,13 @@ function switchLight(lightNumber) {
         $(document).ready(function() { 
             $("#go").click(function() { 
                 var r = $('.red'), 
-                    d = $('.doubleRed), 
+                    b = $('.blue'), 
                     wW = $(window).width(), 
                     rSpeed = Math.floor(Math.random() * wW + wW), 
-                    dpeed = Math.floor(Math.random() * wW + wW); 
+                    bSpeed = Math.floor(Math.random() * wW + wW); 
                 switchLight(2); 
                 function winTest() { 
-                    if (rSpeed > dSpeed) { 
+                    if (rSpeed > bSpeed) { 
                         alert("Top car has won :)!"); 
                         reset(); 
                     } else { 
@@ -67,7 +68,7 @@ function switchLight(lightNumber) {
                             winTest(); 
                         } 
                     }); 
-                    var dAnim = d.animate({ 
+                    var bAnim = b.animate({ 
                         left: dSpeed 
                     }, { 
                         duration: 600, 
@@ -82,7 +83,7 @@ function switchLight(lightNumber) {
                     rSpeed = 0; 
                     dSpeed = 0; 
                     r.css('left', 20); 
-                    d.css('left', 20); 
+                    b.css('left', 20); 
                 } 
             }); 
         }); 
