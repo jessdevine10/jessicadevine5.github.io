@@ -21,7 +21,16 @@ div {
 	position: absolute;
 	background-image: url("car.png"):
 }
+.light { 
 
+  height: 100px; 
+  width : 150px; 
+  border-radius: 60%; 
+  opacity : 0.5; 
+  margin: 0 auto; 
+  display: inline-block;
+}
+ 
 .stop {background-color: #ff8080;} 
 .slow {background-color: #778899;} 
 .go {background-color: #99ffcc;} 
