@@ -28,4 +28,11 @@ function allOff() {
 } 
 </script>
 
+<script> 
+function switchLight(lightNumber) { 
+  allOff(); 
+  var light = LIGHTS[lightNumber]; 
+  light.classList.add("on"); 
+}
+
 </html>
