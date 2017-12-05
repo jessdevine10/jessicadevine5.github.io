@@ -7,13 +7,25 @@
   <title>Jessica's Final Project</title>
   <meta name="description" content="HTML5 Template">
   <link rel="stylesheet" type="text/css" href="stylepage.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 <center><h1>The Great Race</h1>
 <center><h3>Click Green Light to Begin</h3>
-
 </head>
 
 <body>
+<div onClick="switchLight(0)"; class="Light Stop"</div>
+<div onClick="switchLight(1)"; class="Light Slow"</div>
+<div onClick="switchLight(2)"; class="Light Go" id="go"</div>
+</body>
+
+<script type="text/javascript">
+var threelights = document.getElementByClassName("light");
+	function Off() {
+		for (car i=0; i<LIGHTS.length; i = i+1) {
+			threelights[i].classList.remove("go");
+}
+</script>
 
 </body>
 </html>
