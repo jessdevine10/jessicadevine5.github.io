@@ -20,18 +20,18 @@
 </body>
 
 <script type="text/javascript">
-var threelights = document.getElementByClassName("light");
+var threeLight = document.getElementByClassName("light");
 	function Off() {
-		for (car i=0; i<LIGHTS.length; i = i+1) {
-			threelights[i].classList.remove("go");
+		for (car i=0; i<threeLight.length; i = i+1) {
+			threeLight[i].classList.remove("on");
 }
 </script>
 
 <script>
 function switchLight(lightNumber) { 
   Off(); 
-  var light = threelghts[lightNumber]; 
-  light.classList.add("go"); 
+  var light = threeLight[lightNumber]; 
+  light.classList.add("on"); 
 }
 
 </body>
