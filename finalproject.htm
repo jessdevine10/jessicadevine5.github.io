@@ -12,28 +12,78 @@
 <center><h1>The Great Race</h1>
 <center><h3>Click Green Light to Begin</h3>
 </head>
-<canvas id="myCanvas" width="1400" height="800" style="border:3px solid black;">
+<canvas id="myCanvas" width="1400" height="900" style="border:3px solid black;">
 </canvas>
-<body>
-<div2 onclick="switchLight(0);" class="light stop on" id="pause"></div2> 
-<div2 onclick="switchLight(1);" class="light slow"></div2>
-<div2 onclick="switchLight(2);" class="light go" id="go"></div2>  
+<center><body> 
+	
+    <div class="red"></div> 
+    <div class="blue"></div> 
+    <div2 onclick="switchLight(0);" class="light stop on" id="pause"></div2> 
+   <div2 onclick="switchLight(1);" class="light slow"></div2>
+    <div2 onclick="switchLight(2);" class="light go" id="go"></div2>  
 </body>
+
 <script type="text/javascript">
-var LIGHTS = document.getElementsByClassName("light");
+var LIGHT = document.getElementsByClassName("light");
 function allOff() { 
-  for (var i=0; i<LIGHTS.length; i = i+1) { 
-    LIGHTS[i].classList.remove("on"); 
+  for (var i=0; i<LIGHT.length; i = i+1) { 
+    LIGHT[i].classList.remove("on"); 
   } 
 } 
 </script>
-
 <script> 
 function switchLight(lightNumber) { 
   allOff(); 
-  var light = LIGHTS[lightNumber]; 
+  var light = LIGHT[lightNumber]; 
   light.classList.add("on"); 
 }
-</script>
-
+        $(document).ready(function() { 
+            $("#go").click(function() { 
+                var r = $('.red'), 
+                    b = $('.blue'), 
+                    wW = $(window).width(), 
+                    rSpeed = Math.floor(Math.random() * wW + wW), 
+                    bSpeed = Math.floor(Math.random() * wW + wW); 
+                switchLight(2); 
+                function winTest() { 
+                    if (rSpeed > bSpeed) { 
+                        alert(); 
+                        reset(0); 
+                    } else { 
+                        alert(); 
+                        reset(0); 
+                    } 
+                    switchLight(0); 
+                } 
+                function race() { 
+                    var rAnim = r.animate({ 
+                        left: rSpeed 
+                    }, { 
+                        duration: 600, 
+                        done: function() { 
+                            bAnim.stop(500); 
+                            winTest(); 
+                        } 
+                    }); 
+                    var bAnim = b.animate({ 
+                        left: bSpeed 
+                    }, { 
+                        duration: 600, 
+                        done: function() { 
+                            rAnim.stop(400); 
+                            winTest(); 
+                        } 
+                    }); 
+                } 
+                race(); 
+                function reset() { 
+                    rSpeed = 0; 
+                    bSpeed = 0; 
+                    r.css('left', 20); 
+                    b.css('left', 20); 
+                } 
+            }); 
+        }); 
+    </script> 
+</body> 
 </html>
