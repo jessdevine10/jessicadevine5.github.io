@@ -11,3 +11,11 @@ h1 {
 h3 {
 	color: solid black;
 }
+
+div {
+	height: 280px;
+	width: 300px;
+	margin-bottom: 100px;
+	position: absolute;
+	background-image: url("car.png"):
+}

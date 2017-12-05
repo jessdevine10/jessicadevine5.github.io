@@ -14,25 +14,19 @@
 </head>
 
 <body>
-<div onClick="switchLight(0)"; class="Light Stop"</div>
-<div onClick="switchLight(1)"; class="Light Slow"</div>
-<div onClick="switchLight(2)"; class="Light Go" id="go"</div>
+<div class="red"></div>
 </body>
-
-<script type="text/javascript">
-var threeLight = document.getElementByClassName("light");
-	function Off() {
-		for (car i=0; i<threeLight.length; i = i+1) {
-			threeLight[i].classList.remove("on");
-}
-</script>
 
 <script>
-function switchLight(lightNumber) { 
-  Off(); 
-  var light = threeLight[lightNumber]; 
-  light.classList.add("on"); 
+ 	$(document).ready(function() { 
+            $("#go").click(function() { 
+                var r = $('.red'), 
+                    wW = $(window).width(), 
+                    rSpeed = Math.floor(Math.random() + wW); 
+                } 
 }
+                
+        
+    </script> 
 
-</body>
 </html>
