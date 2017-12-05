@@ -11,6 +11,8 @@ background-image: url("car.png"):
 }	
 body {
 	background-color:#778899;
+	font-family: Courier New;
+	text-align: center;
 }
 
 h1 {
@@ -25,9 +27,9 @@ h3 {
 
 .light { 
 
-  height: 100px; 
-  width : 100px; 
-  border-radius: 60%; 
+  height: 130px; 
+  width : 130px; 
+  border-radius: 50%; 
   opacity : 0.5; 
   margin: 0 auto; 
   display: inline-block;
@@ -36,4 +38,4 @@ h3 {
 .stop {background-color: #ff8080;} 
 .slow {background-color: #778899;} 
 .go {background-color: #99ffcc;} 
-.on {opacity: 3;} 
+.on {opacity: 1;} 

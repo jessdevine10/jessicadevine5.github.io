@@ -10,39 +10,41 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 <center><h1>The Great Race</h1>
-<center><h3>Click Green Light to Begin</h3>
+
 </head>
-<canvas id="myCanvas" width="1400" height="700" style="border:3px solid black;">
-</canvas>
-<center><body> 
-    <div class="red"></div> 
-    <div class="blue"></div> 
-    <div2 onclick="switchLight(0);" class="light stop on" id="pause"></div2> 
+<center><body>
+	<center><h3>Click Green Light to Begin</h3>
+	<  
+     <div2 onclick="switchLight(0);" class="light stop on" id="pause"></div2> 
    <div2 onclick="switchLight(1);" class="light slow"></div2>
-    <div2 onclick="switchLight(2);" class="light go" id="go"></div2>  
+    <div2 onclick="switchLight(2);" class="light go" id="go"></div2>   
 </body>
 
 <script type="text/javascript">
+/* This line gets all the HTML elements with class="light" and assigns them to a variable called LIGHTS.*/
 var LIGHT = document.getElementsByClassName("light");
+/* This defines a function which turns off every light by removing the "on" class from the HTML elements.*/
 function allOff() { 
-  for (var i=0; i<LIGHT.length; i = i+1) { 
+  for (var i=0; i<LIGHT.length; i = i + 1) { 
     LIGHT[i].classList.remove("on"); 
   } 
 } 
-</script>
-<script> 
+ </script>
+<script>
+/* This defines a function which first turns off every light and then immediately turns one on.*/
 function switchLight(lightNumber) { 
   allOff(); 
   var light = LIGHT[lightNumber]; 
   light.classList.add("on"); 
 }
+
         $(document).ready(function() { 
             $("#go").click(function() { 
                 var r = $('.red'), 
-                    b = $('.blue'), 
+                     = $('.blue'), 
                     wW = $(window).width(), 
                     rSpeed = Math.floor(Math.random() * wW + wW), 
-                    bSpeed = Math.floor(Math.random() * wW + wW); 
+                    Speed = Math.floor(Math.random() * wW + wW); 
                 switchLight(2); 
                 function winTest() { 
                     if (rSpeed > bSpeed) { 
@@ -69,7 +71,7 @@ function switchLight(lightNumber) {
                     }, { 
                         duration: 600, 
                         done: function() { 
-                            rAnim.stop(400); 
+                            rAnim.stop(500); 
                             winTest(); 
                         } 
                     }); 
